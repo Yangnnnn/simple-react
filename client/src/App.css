@@ -1,0 +1,15 @@
+.input_area {
+  position: absolute;
+  left: 1000px;
+  top: 1000px;
+}
+.post_area {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.post_item {
+  flex: 1 0 30%; /* explanation below */
+  margin: 20px;
+}

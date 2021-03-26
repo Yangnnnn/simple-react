@@ -51,16 +51,5 @@ app.get('/posts', async (req, res) => {
   }
 });
 
-const sslServer = https.createServer(
-  {
-    key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
-    cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem')),
-  },
-  app
-);
-
 const PORT = process.env.PORT || 5000;
-sslServer.listen(PORT, () => `Server is running on port ${PORT}`);
-// app.listen(PORT, () => {
-//   `Server is running on port ${PORT}`;
-// });
+app.listen(PORT, () => `Server is running on port ${PORT}`);

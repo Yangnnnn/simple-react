@@ -18,7 +18,7 @@ function App() {
 
   async function sendPost(title, content) {
     try {
-      await axios.post('https://localhost:5000/posts', {
+      await axios.post('https://134.122.35.213:5000/posts', {
         title,
         content,
       });
@@ -29,7 +29,7 @@ function App() {
   }
   async function getPost() {
     try {
-      const response = await axios.get('https://localhost:5000/posts');
+      const response = await axios.get('https://134.122.35.213:5000/posts');
 
       setPosts(response.data);
     } catch (error) {}
